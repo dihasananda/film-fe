@@ -22,6 +22,8 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import ViewMovie from './pages/ViewMovie';
+import ViewFormInput from './pages/ViewFormInput';
 
 setupIonicReact();
 
@@ -37,6 +39,12 @@ const App: React.FC = () => (
         </Route>
         <Route path="/message/:id">
            <ViewMessage />
+        </Route>
+        <Route path="/movie" exact={true}>
+          <ViewMovie />
+        </Route>
+        <Route path="/movie/input" exact={true}>
+          <ViewFormInput />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
